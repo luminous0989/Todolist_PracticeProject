@@ -12,7 +12,7 @@ include("controller.php");
 
   <body>
 
-  <div class="col-md-5 p-5 rounded bg-white mx-auto mt-5">
+  <div class="col-sm-5 p-5 rounded bg-white mx-auto mt-5">
     <form action="" class="input-group-append" method="post" autocomplete="off">
       <div class="input-group mb-3">
       <input required type="text" value="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? $_GET['todo'] : ''; ?>" name="task" class="form-control" name id="task" placeholder="write a task ...">
