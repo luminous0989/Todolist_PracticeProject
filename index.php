@@ -26,7 +26,7 @@ include("controller.php");
     </div>
 
   <div class="col-4 p-2 rounded bg-white mx-auto mt-5">
-    <h3>Task List: </h3>
+    <h3>Do: </h3>
     <?php $todo->show_todo(); ?>
     </div>
     
