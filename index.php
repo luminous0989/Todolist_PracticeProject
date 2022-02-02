@@ -14,6 +14,7 @@ include("controller.php");
 <div class="container">
   <div class="row">
     <div class="col-4 p-2 rounded bg-white mx-auto mt-5">
+    <h3>New Task: </h3>
       <form action="" class="input-group-append" method="post" autocomplete="off">
         <div class="input-group mb-3">
           <input required type="text" value="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? $_GET['todo'] : ''; ?>" name="task" class="form-control" name id="task" placeholder="write a task ...">
