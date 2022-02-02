@@ -25,15 +25,17 @@ include("controller.php");
       </form>
     </div>
 
-  <div class="col-sm-5 p-5 rounded bg-white mx-auto mt-5">
+  <div class="col-sm-6 p-5 rounded bg-white mx-auto mt-5">
     <h3 class="mt-4">Task List: </h3>
     <?php $todo->show_todo(); ?>
+    
 
     <br />
     <h3>Done: </h3>
     <?php $todo->show_todo(1); ?>
-  </div>
-</div>
+    </div>
+  
+
 
   
   
