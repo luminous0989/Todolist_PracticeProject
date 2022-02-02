@@ -11,18 +11,21 @@ include("controller.php");
   </head>
 
   <body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 p-5 rounded bg-white mx-auto mt-5">
+      <form action="" class="input-group-append" method="post" autocomplete="off">
+        <div class="input-group mb-3">
+          <input required type="text" value="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? $_GET['todo'] : ''; ?>" name="task" class="form-control" name id="task" placeholder="write a task ...">
+            <div class="input-group-append">
+              <input name="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? 'updateLast' : 'addNew'; ?>" type="submit" value="<?php echo isset($_GET['action']) && $_GET['action'] == 'edit' ? 'Edit' : 'Add'; ?>" class="btn btn-primary" />
+                <input type="hidden" type="submit" value="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? $_GET['id'] : ''; ?>" name="task_id"/>
+            </div>
+        </div>
+      </form>
+    </div>
 
   <div class="col-sm-5 p-5 rounded bg-white mx-auto mt-5">
-    <form action="" class="input-group-append" method="post" autocomplete="off">
-      <div class="input-group mb-3">
-      <input required type="text" value="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? $_GET['todo'] : ''; ?>" name="task" class="form-control" name id="task" placeholder="write a task ...">
-        <div class="input-group-append">
-        <input name="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? 'updateLast' : 'addNew'; ?>" type="submit" value="<?php echo isset($_GET['action']) && $_GET['action'] == 'edit' ? 'Edit' : 'Add'; ?>" class="btn btn-primary" />
-        <input type="hidden" type="submit" value="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? $_GET['id'] : ''; ?>" name="task_id"/>
-        </div>
-      </div>
-    </form>
-  
     <h3 class="mt-4">Task List: </h3>
     <?php $todo->show_todo(); ?>
 
@@ -30,6 +33,9 @@ include("controller.php");
     <h3>Done: </h3>
     <?php $todo->show_todo(1); ?>
   </div>
+</div>
+
+  
   
 
   </body>
