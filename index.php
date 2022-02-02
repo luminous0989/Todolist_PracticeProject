@@ -13,7 +13,7 @@ include("controller.php");
   <body>
 <div class="container">
   <div class="row">
-    <div class="col-sm-5 p-5 rounded bg-white mx-auto mt-5">
+    <div class="col-4 p-2 rounded bg-white mx-auto mt-5">
       <form action="" class="input-group-append" method="post" autocomplete="off">
         <div class="input-group mb-3">
           <input required type="text" value="<?= isset($_GET['action']) && $_GET['action'] == 'edit' ? $_GET['todo'] : ''; ?>" name="task" class="form-control" name id="task" placeholder="write a task ...">
@@ -25,21 +25,17 @@ include("controller.php");
       </form>
     </div>
 
-  <div class="col-sm-6 p-5 rounded bg-white mx-auto mt-5">
-    <h3 class="mt-4">Task List: </h3>
+  <div class="col-4 p-2 rounded bg-white mx-auto mt-5">
+    <h3>Task List: </h3>
     <?php $todo->show_todo(); ?>
+    </div>
     
-
-    <br />
+    <div class="col-4 p-2 rounded bg-white mx-auto mt-5">
     <h3>Done: </h3>
     <?php $todo->show_todo(1); ?>
-    </div>
-  
-
+    
 
   
-  
-
   </body>
 
 </html>
